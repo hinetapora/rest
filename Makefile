@@ -30,7 +30,7 @@ go-echo-server:
 		-i openapi-spec.yaml \
 		-o . \
 		--git-host github.com \
-		--git-user-id suquant \
+		--git-user-id hinetapora \
 		--git-repo-id wgrest
 
 typescript-axios-client:
