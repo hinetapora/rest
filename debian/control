@@ -1,0 +1,8 @@
+Package: wgrest
+Version: 1.0.0
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: <dependencies>
+Maintainer: Your Name <your-email@example.com>
+Description: Description of your package.
