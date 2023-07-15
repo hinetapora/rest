@@ -1,9 +1,10 @@
 package utils
 
 import (
-	"github.com/suquant/wgrest/models"
-	"golang.zx2c4.com/wireguard/wgctrl/wgtypes"
 	"strings"
+
+	"github.com/hinetapora/wgrest/models"
+	"golang.zx2c4.com/wireguard/wgctrl/wgtypes"
 )
 
 func FilterPeersByQuery(q string, peers []wgtypes.Peer) []wgtypes.Peer {

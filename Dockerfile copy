@@ -1,4 +1,6 @@
 FROM alpinelinux/golang as build-env
+LABEL maintainer="ForestVPN.com <support@forestvpn.com>"
+
 RUN apk add --no-cache git gcc
 RUN mkdir /app
 
@@ -11,12 +13,13 @@ RUN export appVersion=$(git describe --tags `git rev-list -1 HEAD`) && \
       -ldflags "-X main.appVersion=$appVersion" \
       -o wgrest cmd/wgrest-server/main.go
 
-FROM alpinelinux
+FROM alpine:3.14
+LABEL maintainer="ForestVPN.com <support@forestvpn.com>"
 
-COPY --from=build-env /app/wgrest /app/wgrest
+COPY --from=build-env /app/wgrest .
 
 EXPOSE 8080/tcp
 
 USER 1001
 
-ENTRYPOINT ["/app/wgrest"]
+ENTRYPOINT ["./wgrest"]

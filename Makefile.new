@@ -25,6 +25,21 @@ $(foreach OS,$(OSS),$(foreach ARCH,$(ARCHS),$(eval $(call wgrest,$(OS),$(ARCH)))
 $(BUILDDIR)/wgrest: $(foreach OS,$(OSS),$(foreach ARCH,$(ARCHS),$(BUILDDIR)/wgrest-$(OS)-$(ARCH)))
 	@mkdir -vp "$(BUILDDIR)"
 
+package: $(BUILDDIR)/wgrest
+	mkdir -p pkg/debian/DEBIAN
+	mkdir -p pkg/debian/usr/bin
+	cp $(BUILDDIR)/wgrest-linux-amd64 pkg/debian/usr/bin/wgrest
+	cp debian/control pkg/debian/DEBIAN
+	dpkg-deb --build pkg/debian
+
+package-darwin: $(BUILDDIR)/wgrest-darwin-amd64
+	mkdir -p pkg/darwin
+	cp $(BUILDDIR)/wgrest-darwin-amd64 pkg/darwin/wgrest
+
+package-windows: $(BUILDDIR)/wgrest-windows-amd64
+	mkdir -p pkg/windows
+	cp $(BUILDDIR)/wgrest-windows-amd64 pkg/windows/wgrest.exe
+
 go-echo-server:
 	openapi-generator generate -g go-echo-server \
 		-i openapi-spec.yaml \
@@ -39,4 +54,4 @@ typescript-axios-client:
 		-i openapi-spec.yaml \
 		-o clients/typeascript-axios
 
-.PHONY: clean build install
+.PHONY: clean build install package package-darwin package-windows

@@ -3,12 +3,13 @@ package handlers
 import (
 	"encoding/base64"
 	"fmt"
-	"github.com/labstack/echo/v4"
-	"github.com/suquant/wgrest/models"
-	"github.com/suquant/wgrest/utils"
-	"golang.zx2c4.com/wireguard/wgctrl/wgtypes"
 	"net/http"
 	"strconv"
+
+	"github.com/hinetapora/wgrest/models"
+	"github.com/hinetapora/wgrest/utils"
+	"github.com/labstack/echo/v4"
+	"golang.zx2c4.com/wireguard/wgctrl/wgtypes"
 )
 
 func getPaginator(ctx echo.Context, nums int) (*utils.Paginator, error) {

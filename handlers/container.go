@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"github.com/suquant/wgrest/storage"
+	"github.com/hinetapora/wgrest/storage"
 )
 
 type WireGuardContainerOptions struct {

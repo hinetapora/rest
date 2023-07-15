@@ -1,8 +1,8 @@
 WGRest
 DA
 ---
-[![Build Status](https://drone.fvpn.uk/api/badges/suquant/wgrest/status.svg)](https://drone.fvpn.uk/suquant/wgrest)
-[![codecov](https://codecov.io/gh/suquant/wgrest/branch/master/graph/badge.svg?token=NM179YJFEJ)](https://codecov.io/gh/suquant/wgrest)
+[![Build Status](https://drone.fvpn.uk/api/badges/hinetapora/wgrest/status.svg)](https://drone.fvpn.uk/hinetapora/wgrest)
+[![codecov](https://codecov.io/gh/hinetapora/wgrest/branch/master/graph/badge.svg?token=NM179YJFEJ)](https://codecov.io/gh/hinetapora/wgrest)
 
 WGRest is a WireGuard REST API server. It operates wireguard through IPC and doesn't require any dependencies. It aims
 to be simpler, faster, and usable on embedded devices such as routers or any other low power and low memory devices.
@@ -34,7 +34,7 @@ Check all features [here](https://wgrest.forestvpn.com/swagger/)
 #### WGRest server
 
 ```shell
-curl -L https://github.com/suquant/wgrest/releases/latest/download/wgrest_amd64.deb -o wgrest_amd64.deb
+curl -L https://github.com/hinetapora/wgrest/releases/latest/download/wgrest_amd64.deb -o wgrest_amd64.deb
 
 dpkg -i wgrest_amd64.deb
 ```
@@ -42,7 +42,7 @@ dpkg -i wgrest_amd64.deb
 #### WGRest Web App
 
 ```shell
-curl -L https://github.com/suquant/wgrest-webapp/releases/latest/download/wgrest-webapp_amd64.deb -o wgrest-webapp_amd64.deb
+curl -L https://github.com/hinetapora/wgrest-webapp/releases/latest/download/wgrest-webapp_amd64.deb -o wgrest-webapp_amd64.deb
 
 dpkg -i wgrest-webapp_amd64.deb
 ```
@@ -53,7 +53,7 @@ WGRest optionally comes with web ui and it is not included by default into binar
 enable it.
 
 ```shell
-curl -L https://github.com/suquant/wgrest/releases/latest/download/wgrest-linux-amd64 -o wgrest
+curl -L https://github.com/hinetapora/wgrest/releases/latest/download/wgrest-linux-amd64 -o wgrest
 
 chmod +x wgrest
 ```
@@ -87,7 +87,7 @@ GLOBAL OPTIONS:
 For Web UI support you need to:
 
 ```shell
-curl -L https://github.com/suquant/wgrest-webapp/releases/latest/download/webapp.tar.gz -o webapp.tar.gz
+curl -L https://github.com/hinetapora/wgrest-webapp/releases/latest/download/webapp.tar.gz -o webapp.tar.gz
 
 sudo mkdir -p /var/lib/wgrest/
 sudo chown `whoami` /var/lib/wgrest/

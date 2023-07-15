@@ -1,6 +1,6 @@
 package models
 
-import "github.com/suquant/wgrest/storage"
+import "github.com/hinetapora/wgrest/storage"
 
 func NewDeviceOptions(options storage.StoreDeviceOptions) DeviceOptions {
 	return DeviceOptions{

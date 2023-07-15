@@ -1,10 +1,11 @@
 package storage_test
 
 import (
-	"github.com/suquant/wgrest/storage"
 	"io/ioutil"
 	"os"
 	"testing"
+
+	"github.com/hinetapora/wgrest/storage"
 )
 
 func TestStorage(t *testing.T) {

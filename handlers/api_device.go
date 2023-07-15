@@ -2,18 +2,19 @@ package handlers
 
 import (
 	"bytes"
-	"github.com/labstack/echo/v4"
-	"github.com/skip2/go-qrcode"
-	"github.com/suquant/wgrest/models"
-	"github.com/suquant/wgrest/storage"
-	"github.com/suquant/wgrest/utils"
-	"golang.zx2c4.com/wireguard/wgctrl"
-	"golang.zx2c4.com/wireguard/wgctrl/wgtypes"
 	"io"
 	"net/http"
 	"net/url"
 	"os"
 	"strconv"
+
+	"github.com/hinetapora/wgrest/models"
+	"github.com/hinetapora/wgrest/storage"
+	"github.com/hinetapora/wgrest/utils"
+	"github.com/labstack/echo/v4"
+	"github.com/skip2/go-qrcode"
+	"golang.zx2c4.com/wireguard/wgctrl"
+	"golang.zx2c4.com/wireguard/wgctrl/wgtypes"
 )
 
 // CreateDevice - Create new device

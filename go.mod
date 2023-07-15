@@ -1,4 +1,4 @@
-module github.com/suquant/wgrest
+module github.com/hinetapora/wgrest
 
 go 1.16
 
